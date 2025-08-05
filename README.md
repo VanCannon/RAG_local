@@ -39,7 +39,7 @@ Edit the .env file and replace "api key" with the actual key (no quotes).
 `python3 db_manager.py`
 
 8. Run the query_rag script  
-`python3 query_rag.py`
+`python3 query_rag.py`  
 
 ### Misc notes  
 When starting a new session, the terminal might not start in the virtual mode, so you need to activate it again. (The command line will start with ".venv" if active)  
@@ -55,6 +55,6 @@ Two parameters to play with could be chunk size and overlap.  The text has to be
                 length_function=len,
                 is_separator_regex=False,
             )
-            chunks = text_splitter.split_documents(documents)'''
+            chunks = text_splitter.split_documents(documents)'''  
 
-
+If you change these and have already run the script once on existing documents, then you would have to remove the documents from the docs file, run the script to remove the old chunks, and then put the documents back and run the script again to parse them with the new chunk sizes.
