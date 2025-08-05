@@ -14,17 +14,17 @@ I only "vibe code" and in this case used Gemini, so this code could connect to C
 This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work.
 
 1. Ensure Python3 and pip are installed  
-`sudo apt update`
+`sudo apt update`  
 `sudo apt python3 python3-pip`
 
 2. Create a project folder and clone the repository (Could skip creating the folder and do git clone... but it would keep the repository name.)  
-`mkdir RAG_example`
-`cd RAG_example`
+`mkdir RAG_example`  
+`cd RAG_example`  
 `git pull https://github.com/VanCannon/RAG_local.git`
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
-`python3 -m venv .venv`
-`source .venv/bin/activate`
+`python3 -m venv .venv`  
+`source .venv/bin/activate`  
 `pip install -r requirements.txt`
 
 4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)  
