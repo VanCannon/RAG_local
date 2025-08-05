@@ -40,7 +40,7 @@ Edit the .env file and replace "api key" with the actual key (no quotes).
 `python3 query_rag.py`
 
 ### Misc notes  
-Use `deactivate` to get out of the virtual environment. (The command line will start with ".venv" if active)
+Use `deactivate` to get out of the virtual environment. (The command line will start with ".venv" if active)  
 When starting a new session, the terminal might not start in the virtual mode, so you need to activate it again  
 `source .venv/bin/activate`  
 
