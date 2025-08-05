@@ -20,24 +20,24 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 2. Create a project folder and clone the repository (Could skip creating the folder and do git clone... but it would keep the repository name.)
 `mkdir RAG_example`
 `cd RAG_example`
-'git pull https://github.com/VanCannon/.git'
+`git pull https://github.com/VanCannon/.git`
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.
-'python3 -m venv .venv'
-'source .venv/bin/activate'
-'pip install -r requirements.txt'
+`python3 -m venv .venv`
+`source .venv/bin/activate`
+`pip install -r requirements.txt`
 
 4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
 Edit the .env file and replace "api key" with the actual key (no quotes).
 
 5. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt
-'mkdir docs'
+`mkdir docs`
 
 6. Run the db_manager script
-'python3 db_manager.py'
+`python3 db_manager.py`
 
 7. Run the query_rag script
-'python3 query_rag.py'
+`python3 query_rag.py`
 
 
 
