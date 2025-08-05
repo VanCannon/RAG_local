@@ -47,4 +47,14 @@ When starting a new session, the terminal might not start in the virtual mode, s
 
 Use `deactivate` to get out of the virtual environment.  
 
+Two parameters to play with could be chunk size and overlap.  The text has to be broken up into mangeable pieces, or "chunks" and typical size in characters is 200 to 1500. Overlap means how much of corresponding chunks have the same data to prevent loss of context. This is typically 10-20% of the size. The defaults in the db_maanger.py script is 1000/200. You can find then here:  
+```            # Use a text splitter to break the document into manageable chunks.
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=1000,
+                chunk_overlap=200,
+                length_function=len,
+                is_separator_regex=False,
+            )
+            chunks = text_splitter.split_documents(documents)'''
+
 
