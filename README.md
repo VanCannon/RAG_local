@@ -20,7 +20,7 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 2. Create a project folder and clone the repository (Could skip creating the folder and do git clone... but it would keep the repository name.)  
 `mkdir RAG_example`  
 `cd RAG_example`
-'git config --global init.defaultBranch main'  # only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes thing easier. Otherwise it defaults to "Master"
+`git config --global init.defaultBranch main` # only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes thing easier. Otherwise it defaults to "Master"
 `git init`
 `git pull https://github.com/VanCannon/RAG_local.git`
 
