@@ -3,7 +3,7 @@ Put pdf, docx, and txt files in a local folder on your computer for use in a Gem
 
 There are two scripts, db_manager.py and query_rag.py
 
-The first script. creates a ChromaDB the first time it is run, converts the files to vectors and then saves them to the ChromaDB. It must be run anytime new files are added or old ones deleted to update the database.
+The first script creates a ChromaDB the first time it is run, converts the files to vectors and then saves them to the ChromaDB. It must be run anytime new files are added or old ones deleted to update the database.
 
 The second script does the "Retrival-Augemtnetd Generation'. It inputs your quesiton and number of "chunks" you want to use, then converts the query into a vector.  It then queries the ChromaDB for the closest chunks to the query and sends them to Gemini's API for a response.
 
