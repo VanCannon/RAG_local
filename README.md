@@ -1,5 +1,5 @@
 # RAG_local
-Put pdf, docx, and txt files in a local folder on your computer for use in a Gemini RAG. It is easy to upload a small number of documents to the Gemini web interface, but if you wnat to query a lot of documents and/or run several queries over time with a given set of documents, this approach is easier once you set it up.
+Put pdf, docx, and txt files in a local folder on your computer for use in a Gemini RAG. It is easy to upload a small number of documents to the Gemini web interface, but if you want to query a lot of documents and/or run several queries over time with a given set of documents, this approach is easier once you set it up.
 
 There are two scripts, db_manager.py and query_rag.py
 
@@ -8,7 +8,7 @@ The first script creates a ChromaDB the first time it is run, converts the files
 The second script does the "Retrival-Augemtnetd Generation'. It inputs your quesiton and number of "chunks" you want to use, then converts the query into a vector.  It then queries the ChromaDB for the closest chunks to the query and sends them to Gemini's API for a response.
 
 ### Disclaimer
-I only "vibe code" and in this case used Gemini, so this code could connect to China and upload every file on your computer as far as I know.
+I only "vibe code" and in this case used Gemini, so this code could install ridiculus malware as far as I know.
 
 # Setup
 This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work.
