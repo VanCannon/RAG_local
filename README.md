@@ -21,7 +21,7 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 `mkdir RAG_example`  
 `cd RAG_example`  
 `git config --global init.defaultBranch main` # only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.  
-`git init`
+`git init`  
 `git pull https://github.com/VanCannon/RAG_local.git`
 
 4. Create a virtual python environment and download all the dependencies listed in the requirements file.  
