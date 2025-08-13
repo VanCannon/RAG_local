@@ -17,9 +17,9 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 `sudo apt update`  
 `sudo apt python3 python3-pip`
 
-2. Create a project folder and clone the repository
+2. Create a project folder and clone the repository  
 `git config --global init.defaultBranch main`
-# only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.
+ (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)
 ```
 git clone https://github.com/surjithctly/astroship.git myProjectName
 # or
