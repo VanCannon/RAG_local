@@ -17,10 +17,14 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 `sudo apt update`  
 `sudo apt python3 python3-pip`
 
-2. Create a project folder and clone the repository (Could skip creating the folder and do git clone... but it would keep the repository name.)  
-`mkdir RAG_example`  
-`cd RAG_example`  
-`git config --global init.defaultBranch main` # only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.  
+2. Create a project folder and clone the repository
+`git config --global init.defaultBranch main` # only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.
+`git clone https://github.com/surjithctly/astroship.git myProjectName'
+# or
+git clone https://github.com/surjithctly/astroship.git .`  
+The `.` will clone it to the current directory so make sure you are inside your project folder first.
+
+  
 `git init`  
 `git pull https://github.com/VanCannon/RAG_local.git`
 
