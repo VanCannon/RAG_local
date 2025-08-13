@@ -15,11 +15,11 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 
 1. Ensure Python3 and pip are installed  
 `sudo apt update`  
-`sudo apt python3 python3-pip`
+`sudo apt python3 python3-pip`  
 `git config --global init.defaultBranch main`
  (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)
 
-3. Create a project folder and clone the repository  
+2. Create a project folder and clone the repository  
 ```
 git clone https://github.com/surjithctly/astroship.git myProjectName
 # or
@@ -27,25 +27,21 @@ git clone https://github.com/surjithctly/astroship.git .
 ```  
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
 
-  
-`git init`  
-`git pull https://github.com/VanCannon/RAG_local.git`
-
-4. Create a virtual python environment and download all the dependencies listed in the requirements file.  
+3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
 `source .venv/bin/activate`  
 `pip install -r requirements.txt`
 
-5. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)  
+4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)  
 Edit the .env file and replace "api key" with the actual key (no quotes).
 
-6. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
+5. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
 `mkdir docs`
 
-7. Run the db_manager script  
+6. Run the db_manager script  
 `python3 db_manager.py`
 
-8. Run the query_rag script  
+7. Run the query_rag script  
 `python3 query_rag.py`  
 
 ### Misc notes  
