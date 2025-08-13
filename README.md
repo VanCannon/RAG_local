@@ -20,7 +20,7 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
  (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)
 
 2. Create a project folder and clone the repository  
-```
+```bash
 git clone https://github.com/surjithctly/astroship.git myProjectName
 # or
 git clone https://github.com/surjithctly/astroship.git .
