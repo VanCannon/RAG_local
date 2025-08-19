@@ -32,8 +32,8 @@ git clone https://github.com/surjithctly/astroship.git .
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
-`source .venv/bin/activate`
-(The command line will start with ".venv" if active) 
+`source .venv/bin/activate`  
+(The command line will start with ".venv" if active)  
 `pip install -r requirements.txt`
 
 5. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
