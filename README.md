@@ -22,10 +22,13 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 3. Create a project folder and clone the repository  
 ```bash
 git clone https://github.com/surjithctly/astroship.git myProjectName
-# or
+cd myProjectName
+# --OR--
+mkdir myProjectName
 git clone https://github.com/surjithctly/astroship.git .
+cd myProjectName
 ```  
-The `.` will clone it to the current directory so make sure you are inside your project folder first.
+
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
