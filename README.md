@@ -11,7 +11,7 @@ The second script does the "Retrival-Augmented Generation'. It inputs your quest
 I only "vibe code" and in this case used Gemini, so this code could install ridiculus malware as far as I know.
 
 # Setup
-This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work.
+This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work. Assumes you have git installed.
 
 1. Ensure Python3 and pip are installed  
 `sudo apt update`  
