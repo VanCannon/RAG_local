@@ -15,8 +15,8 @@ This was all done on Ubuntu desktop with VScode, but any editor and problaby eve
 
 1. Ensure Python3, pip and git are installed  
 `sudo apt update`  
-`sudo apt python3 python3-pip`
-`sudo apt install git` 
+`sudo apt python3 python3-pip`  
+`sudo apt install git`  
 `git config --global init.defaultBranch main`
  (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)  
 
