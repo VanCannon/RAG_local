@@ -35,16 +35,17 @@ git clone https://github.com/surjithctly/astroship.git .
 `source .venv/bin/activate`  
 `pip install -r requirements.txt`
 
-4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)  
+4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
+(Requires a Google account, which you have if you have gmail.)
 Edit the .env file and replace "api key" with the actual key (no quotes).
 
-5. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
+6. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
 `mkdir docs`
 
-6. Run the db_manager script  
+7. Run the db_manager script  
 `python3 db_manager.py`
 
-7. Run the query_rag script  
+8. Run the query_rag script  
 `python3 query_rag.py`  
 
 ### Misc notes  
