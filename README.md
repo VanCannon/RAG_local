@@ -25,8 +25,8 @@ git clone https://github.com/surjithctly/astroship.git myProjectName
 cd myProjectName
 # --OR--
 mkdir myProjectName
-git clone https://github.com/surjithctly/astroship.git .
 cd myProjectName
+git clone https://github.com/surjithctly/astroship.git .
 ```  
 
 
