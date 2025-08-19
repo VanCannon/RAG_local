@@ -53,7 +53,7 @@ When starting a new session, the terminal might not start in the virtual mode, s
 
 Use `deactivate` to get out of the virtual environment.  
 
-I was not sure how to choose the number of chunks to use. It helps to understand chunks in the first place. The text has to be broken up into mangeable pieces, or "chunks" and typical size in characters is 200 to 1500. Overlap means how much of corresponding chunks have the same data to prevent loss of context. This is typically 10-20% of the size. The defaults in the db_manger.py script is 1000/200.  1000 charaters is very roughly about 1/2 a page of single-spaced text.
+I was not sure how to choose the number of chunks to use. It helps to understand chunks in the first place. The text has to be broken up into mangeable pieces, or "chunks" and typical size in characters is 200 to 1500. "Overlap" means how much of corresponding chunks have the same data to prevent loss of context. This is typically 10-20% of the size. The defaults in the db_manger.py script is 1000/200.  1000 charaters is very roughly about 1/2 a page of single-spaced text.
 
 If you want to modify them, you can find them in this spot in the db_manager script:  
 ```            # Use a text splitter to break the document into manageable chunks.
