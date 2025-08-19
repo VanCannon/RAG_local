@@ -32,10 +32,11 @@ git clone https://github.com/surjithctly/astroship.git .
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
-`source .venv/bin/activate`  
+`source .venv/bin/activate`
+(The command line will start with ".venv" if active) 
 `pip install -r requirements.txt`
 
-4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
+5. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
 (Requires a Google account, which you have if you have gmail.)
 Edit the .env file and replace "api key" with the actual key (no quotes).
 
@@ -49,8 +50,9 @@ Edit the .env file and replace "api key" with the actual key (no quotes).
 `python3 query_rag.py`  
 
 ### Misc notes  
-When starting a new session, the terminal might not start in the virtual mode, so you need to activate it again. (The command line will start with ".venv" if active)  
+When starting a new session, the terminal might not start in the virtual mode, so you need to activate it again. 
 `source .venv/bin/activate`  
+(The command line will start with ".venv" if active) 
 
 Use `deactivate` to get out of the virtual environment.  
 
