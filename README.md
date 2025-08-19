@@ -11,15 +11,16 @@ The second script does the "Retrival-Augmented Generation'. It inputs your quest
 I only "vibe code" and in this case used Gemini, so this code could install ridiculus malware as far as I know.
 
 # Setup
-This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work. Assumes you have git installed.
+This was all done on Ubuntu desktop with VScode, but any editor and problaby even just a terminal would work. 
 
-1. Ensure Python3 and pip are installed  
+1. Ensure Python3, pip and git are installed  
 `sudo apt update`  
-`sudo apt python3 python3-pip`  
+`sudo apt python3 python3-pip`
+`sudo apt install git` 
 `git config --global init.defaultBranch main`
  (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)  
 
-2. Create a project folder and clone the repository  
+3. Create a project folder and clone the repository  
 ```bash
 git clone https://github.com/surjithctly/astroship.git myProjectName
 # or
