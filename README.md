@@ -10,8 +10,8 @@ The second script does the "Retrival-Augmented Generation'. It inputs your quest
 ### Disclaimer
 I only "vibe code" and in this case used Gemini, so this code could install ridiculus malware as far as I know.
 
-# Setup
-This was all done on Ubuntu desktop with a terminal in VScode, but just a terminal in any Debian-based Linux would work as well.
+# Setup - Linux
+This was all done in a teraminal on Ubuntu Linux
 
 1. Ensure Python3, pip and git are installed  
 `sudo apt update`  
@@ -49,7 +49,54 @@ Edit the .env file and replace "api key" with the actual key (no quotes).
 8. Run the query_rag script  
 `python3 query_rag.py`  
 
-### Misc notes  
+# Setup - Windows
+This was all done in a Powershell terminal on Windows 11
+
+1. Install python3 and pip (pip comes with pytohn3 latest versions) on Windows [video](https://www.youtube.com/watch?v=TNAu6DvB9Ng)
+`python3 --version`  
+`pip --verison`
+
+3. Install git  
+`winget install --id Git.Git -e --source winget`
+(Have to say Yes for approval)
+Close the Powershell window and open a new one so the new path can take hold.
+git --version
+`git --version`
+
+5. Create a project folder and clone the repository. Change "myProjectName" to wahtever you want.
+```bash
+git clone https://github.com/VanCannon/RAG_local.git myProjectName
+cd myProjectName
+# --OR--
+mkdir myProjectName
+cd myProjectName
+git clone https://github.com/VanCannon/RAG_local.git .
+```  
+
+
+3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
+`python3 -m venv .venv`  
+`source .venv/bin/activate`  
+(The command line will start with ".venv" if active)  
+`pip install -r requirements.txt`
+
+5. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
+(Requires a Google account, which you have if you have gmail.)
+Edit the .env file and replace "api key" with the actual key (no quotes).
+
+6. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
+`mkdir docs`
+
+7. Run the db_manager script  
+`python db_manager.py`
+
+8. Run the query_rag script  
+`python query_rag.py`  
+
+
+
+
+## Misc notes  
 When starting a new session, the terminal might not start in the virtual mode, so you need to activate it again. 
 `source .venv/bin/activate`  
 (The command line will start with ".venv" if active) 
