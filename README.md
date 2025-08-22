@@ -21,12 +21,12 @@ This was all done on Ubuntu desktop with a terminal in VScode, but just a termin
 
 3. Create a project folder and clone the repository  
 ```bash
-git clone https://github.com/surjithctly/astroship.git myProjectName
+git clone https://github.com/VanCannon/RAG_local.git myProjectName
 cd myProjectName
 # --OR--
 mkdir myProjectName
 cd myProjectName
-git clone https://github.com/surjithctly/astroship.git .
+git clone https://github.com/VanCannon/RAG_local.git .
 ```  
 
 
