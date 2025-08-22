@@ -19,7 +19,7 @@ This was all done in a teraminal on Ubuntu Linux
 `git config --global init.defaultBranch main`
  (Only if you want the initial branch of all future local repositories to be called "main" which lines up with Github and makes things easier. Otherwise it defaults to "Master". Only need to do this the first time.)  
 
-3. Create a project folder and clone the repository. Change "myProjectName" to wahtever you want.    
+2. Create a project folder and clone the repository. Change "myProjectName" to wahtever you want.    
 ```bash
 git clone https://github.com/VanCannon/RAG_local.git myProjectName
 cd myProjectName
@@ -36,17 +36,17 @@ git clone https://github.com/VanCannon/RAG_local.git .
 (The command line will start with ".venv" if active)  
 `pip install -r requirements.txt`
 
-5. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
+4. Get your Gemini API key [here](https://makersuite.google.com/app/apikey)
 (Requires a Google account, which you have if you have gmail.)
 Edit the .env file and replace "api key" with the actual key (no quotes).
 
-6. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
+5. Create a docs folder and then put the reference documents in it.  They can be .pdf, .docx, or .txt  
 `mkdir docs`
 
-7. Run the db_manager script  
+6. Run the db_manager script  
 `python3 db_manager.py`
 
-8. Run the query_rag script  
+7. Run the query_rag script  
 `python3 query_rag.py`  
 
 # Setup - Windows
@@ -60,7 +60,7 @@ This was all done in a Powershell terminal on Windows 11
 `winget install --id Git.Git -e --source winget`
 A separate windows opens asking for permission, say yes.  
 Close the Powershell window and open a new one so the new path can take hold.
-git --version
+git --version  
 `git --version`
 
 4. Create a project folder and clone the repository. Change "myProjectName" to wahtever you want.
