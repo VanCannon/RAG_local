@@ -32,7 +32,7 @@ git clone https://github.com/VanCannon/RAG_local.git .
 
 3. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
-`.venv\Scripts\activate`  
+`source .venv/bin/activate`  
 (The command line will start with ".venv" if active)  
 `pip install -r requirements.txt`
 
@@ -76,7 +76,7 @@ git clone https://github.com/VanCannon/RAG_local.git .
 
 4. Create a virtual python environment and download all the dependencies listed in the requirements file.  
 `python3 -m venv .venv`  
-`source .venv/bin/activate`  
+`.venv\Scripts\activate`  
 (The command line will start with ".venv" if active)  
 `pip install -r requirements.txt`
 
