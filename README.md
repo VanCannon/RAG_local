@@ -49,7 +49,7 @@ Edit the .env file and replace "api key" with the actual key (no quotes).
 7. Run the query_rag script  
 `python3 query_rag.py`  
 
-# Setup - Windows
+# Windows
 This was all done in a Powershell terminal on Windows 11
 
 1. Install python3 and pip (pip comes with pytohn3 latest versions) on Windows [video](https://www.youtube.com/watch?v=TNAu6DvB9Ng)  
