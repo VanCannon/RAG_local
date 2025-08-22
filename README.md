@@ -54,7 +54,7 @@ This was all done in a Powershell terminal on Windows 11
 
 1. Install python3 and pip (pip comes with pytohn3 latest versions) on Windows [video](https://www.youtube.com/watch?v=TNAu6DvB9Ng)  
 `python3 --version`  
-`pip --verison`
+`pip --version`
 
 2. Install git  
 `winget install --id Git.Git -e --source winget`
