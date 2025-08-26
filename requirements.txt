@@ -1,6 +1,6 @@
 python-dotenv
 langchain-community
-langchain-google-genai
+sentence-transformers
 langchain-chroma
 pypdf
 unstructured[local-inference]

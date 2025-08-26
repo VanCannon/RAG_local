@@ -2,8 +2,6 @@
 
 import os
 import glob
-import getpass
-from dotenv import load_dotenv
 from typing import List
 
 # We use the langchain_community library for document loading and text splitting.
@@ -12,7 +10,8 @@ from typing import List
 # TextLoader is for .txt files.
 from langchain_community.document_loaders import PyPDFLoader, UnstructuredWordDocumentLoader, TextLoader
 from langchain_community.vectorstores import Chroma
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+import torch
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
@@ -21,21 +20,9 @@ from langchain_core.documents import Document
 # pip install "unstructured[local-inference]"
 
 # --- Configuration ---
-# Load environment variables from the .env file.
-# This is a secure way to manage your API key.
-load_dotenv()
-
-# Check if the API key is set.
-google_api_key = os.getenv("GOOGLE_API_KEY")
-if not google_api_key:
-    # If not in .env, prompt the user for it securely.
-    google_api_key = getpass.getpass("Enter your Google API Key: ")
-    os.environ["GOOGLE_API_KEY"] = google_api_key
-
-# Define the file paths and model names.
+# Define the file paths.
 DOCS_DIRECTORY = "docs"
 CHROMA_DB_DIRECTORY = "chroma_db"
-EMBEDDING_MODEL_NAME = "models/embedding-001"
 
 # --- Helper Functions ---
 
@@ -63,8 +50,13 @@ def get_db_and_docs_from_disk():
     Initializes or loads a persistent ChromaDB instance and returns it along
     with a list of all documents in the database.
     """
-    print("1. Initializing Gemini embeddings...")
-    embeddings = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL_NAME)
+    print("1. Initializing local embeddings...")
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    print(f"    -> Using '{device}' for embeddings.")
+    embeddings = SentenceTransformerEmbeddings(
+        model_name="all-MiniLM-L6-v2",
+        model_kwargs={'device': device}
+    )
 
     # Check if the ChromaDB directory already exists.
     if not os.path.exists(CHROMA_DB_DIRECTORY):
@@ -190,6 +182,10 @@ def sync_vector_db():
     remove_deleted_documents(vector_store, documents_to_delete_paths)
     
     print("\n--- Database sync complete. ---")
+
+    # Final check on the number of chunks in the database
+    final_count = len(vector_store.get(include=['metadatas'])['metadatas'])
+    print(f"--- Final check: {final_count} chunks in the database. ---")
 
 # --- Main Execution ---
 if __name__ == "__main__":
