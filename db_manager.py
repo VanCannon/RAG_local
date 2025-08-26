@@ -9,9 +9,9 @@ from typing import List
 # UnstructuredWordDocumentLoader is for .docx files (requires the `unstructured` library).
 # TextLoader is for .txt files.
 from langchain_community.document_loaders import PyPDFLoader, UnstructuredWordDocumentLoader, TextLoader
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 import torch
-from langchain_community.embeddings import SentenceTransformerEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
@@ -53,7 +53,7 @@ def get_db_and_docs_from_disk():
     print("1. Initializing local embeddings...")
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"    -> Using '{device}' for embeddings.")
-    embeddings = SentenceTransformerEmbeddings(
+    embeddings = HuggingFaceEmbeddings(
         model_name="all-MiniLM-L6-v2",
         model_kwargs={'device': device}
     )

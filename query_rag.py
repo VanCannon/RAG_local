@@ -3,11 +3,12 @@
 import os
 import getpass
 from dotenv import load_dotenv
+import torch
 
 # We use the langchain_community library for document loading, embeddings, and vector stores.
 from langchain_chroma import Chroma
 from langchain_google_genai import GoogleGenerativeAI
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
 
 # --- Configuration ---
@@ -23,7 +24,6 @@ if not google_api_key:
 
 # Define the file paths and model names.
 CHROMA_DB_DIRECTORY = "chroma_db"
-EMBEDDING_MODEL_NAME = "models/embedding-001"
 GENERATION_MODEL_NAME = "models/gemini-2.5-flash"
 
 
@@ -34,8 +34,13 @@ def load_vector_store():
     Loads the persistent ChromaDB from disk using the specified directory.
     """
     try:
-        print("1. Initializing Gemini embeddings...")
-        embeddings = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL_NAME)
+        print("1. Initializing HuggingFace embeddings...")
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        print(f"    -> Using '{device}' for embeddings.")
+        embeddings = HuggingFaceEmbeddings(
+            model_name="all-MiniLM-L6-v2",
+            model_kwargs={'device': device}
+        )
 
         print("2. Loading vector store from disk...")
         # Load the existing database using the same persistence directory.

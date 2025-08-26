@@ -5,3 +5,5 @@ langchain-chroma
 pypdf
 unstructured[local-inference]
 chromadb
+langchain-huggingface
+langchain-google-genai
